@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D搜索表单</title>
+    <style>
+        div{
+            margin: 100px auto;
+            padding: 8px 12px;
+            width: 320px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            box-shadow: 1px 3px 1px 0 #858585,2px 4px 3px 2px #c0c0c0;
+            background: -moz-linear-gradient(top,#f5f5f5 20%, #e1e3e3 80%);
+        }
+        #text{
+            width: 250px;
+            height: 20px;
+            padding: 5px 5px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            box-shadow: 1px 1px 1px 0 #858585 inset,1px 1px 2px 0 #fff,0 0 12px 3px #ededed inset;
+        }
+        .btn{
+            width: 50px;
+            height: 33px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            float: right;
+            background: -moz-linear-gradient(top,#f5f5f5 10%,#e1e3e3 60%);
+        }
+        .btn:hover{
+            cursor: pointer;
+            background: #0bc149;
+            box-shadow: 0 2px 3px 0 #fff inset,-2px -2px 10px 0 #168832 inset;
+            border: 1px solid #0bdb52;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<form method="post" action="#">
+    <div>
+        <input type="text" id="text" required placeholder="请输入搜索内容">
+        <input type="submit" class="btn" value="搜索">
+    </div>
+</form>
+</body>
+</html>
