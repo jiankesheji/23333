@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    width: 1000px;
+    margin: 40px auto;
+}
+
+nav {
+    width: 1000px;
+    height: 40px;
+    background: #999;
+    border-radius: 5px;
+}
+
+nav li {
+    float: left;
+    text-align: center;
+    width: 70px;
+    height: 40px;
+    line-height: 40px;
+    list-style: none;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    font-weight: bolder;
+}
+
+.left {
+    width: 430px;
+    height: 250px;
+    margin-top: 20px;
+    float: left;
+}
+
+.right {
+    width: 430px;
+    height: 250px;
+    margin-top: 20px;
+    float: right;
+}
+
+.right h2,
+.left h2 {
+    color: dimgray;
+    font-size: 20px;
+    font-family: 黑体;
+    line-height: 50px;
+    text-indent: 1em;
+}
+
+.right ul,
+.left ul {
+    width: 390px;
+    margin: 0px 19px 10px 19px;
+}
+
+.right li,
+.left li {
+    width: 390px;
+    height: 40px;
+    list-style: none;
+    text-align: left;
+}
+
+.right time,
+.left time {
+    float: right;
+}
+
+.right a,
+.left a {
+    text-decoration: none;
+    color: midnightblue;
+}
+
+.right a:hover,
+.left a:hover {
+    color: deeppink;
+}
+
+footer {
+    clear: both;
+    width: 1000px;
+    height: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer span {
+    margin-right: 20px;
+}
+
+footer a {
+    font-size: 14px;
+    line-height: 200px;
+    color: dimgray;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: deeppink;
+}
