@@ -1,123 +1,195 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>一个网站</title>
-    <link rel="stylesheet" type="text/css" href="css.css">
+    <title>注册表</title>
+    <style>
+        .contact_form {
+            padding-top: 40px;
+            margin: 0 auto;
+            width: 750px;
+        }
+
+        *:focus {
+            outline: none;
+        }
+
+        body {
+            font: 14px/21px "微软雅黑";
+        }
+
+        .form_ts,
+        .ts {
+            font-size: 11px;
+        }
+
+        .contact_form ul {
+            width: 750px;
+            list-style-type: none;
+            list-style-position: outside;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .contact_form li {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+            position: relative;
+        }
+
+        .contact_form li:first-child,
+        .contact_form li:last-child {
+            border-bottom: 1px solid #000;
+        }
+
+        .contact_form h2 {
+            margin: 0px;
+            display: inline;
+        }
+
+        .ts {
+            color: #d45252;
+            margin: 5px 0 0 0;
+            display: inline;
+            float: right;
+        }
+
+        .contact_form label {
+            width: 150px;
+            margin-top: 3px;
+            display: inline-block;
+            float: left;
+            padding: 3px;
+        }
+
+        .contact_form input {
+            height: 20px;
+            width: 220px;
+            padding: 5px 8px;
+            border: 1px solid #aaa;
+            box-shadow: 0 0 3px #ccc, 0 10px 15px #eee inset;
+            border-radius: 2px;
+            padding-right: 30px;
+            transition: padding .5s;
+        }
+
+        .contact_form input:focus {
+            background: #fff;
+            border: 1px solid #555;
+            box-shadow: 0 0 3px #aaa;
+            padding-right: 70px;
+        }
+        .contact_form input:required:valid{
+            box-shadow: 0 0 5px #5cd053;
+            border-color: #28921f;
+        }
+        .contact_form input:focus:required:invalid{
+            box-shadow: 0 0 5px #d45252;
+            border-color: #b03535;
+        }
+        .form_ts{
+            background: #d45252;
+            border-radius: 3px 3px 3px 3px;
+            color: white;
+            margin-left: 8px;
+            padding: 1px 6px;
+            z-index: 999;
+            position: absolute;
+            display: none;
+        }
+        .form_ts::before{
+            content:"\25C0";
+            color: #d45252;
+            position: absolute;
+            left: -7px;
+        }
+        .contact_form input:focus + .form_ts {
+            display: inline;
+        }
+        .contact_form input:required:valid + .form_ts {
+            background: #28921f;
+        }
+        .contact_form input:required:valid + .form_ts::before {
+            color:#28921f;
+        }
+        button{
+            background-color: #68b12f;
+            background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));
+            border: 1px solid #509111;
+            border-bottom: 1px solid #5b992b;
+            border-radius: 3px;
+            box-shadow: inset 0 1px 0 0 #9fd574;
+            color: white;
+            font-weight: bold;
+            padding: 6px 20px;
+            text-align: center;
+            text-shadow: 0 -1px 0 #396715;
+            margin-left: 156px;
+        }
+        button:hover {
+            opacity:.85;
+            cursor: pointer;
+        }
+        button:active {
+            border: 1px solid #20911e;
+            box-shadow: 0 0 10px 5px #356b0b inset;
+        }
+        #ts{
+            color: white;
+            width: 120px;
+            text-align: center;
+            background: #ff3f14;
+            margin-left: 167px;
+            border-radius: 3px;
+        }
+    </style>
 </head>
 <body>
-<div class="main">
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#">首页</a>
-                </li>
-                <li>
-                    <a href="#" style="color: red">新闻</a>
-                </li>
-                <li>
-                    <a href="#">体育</a>
-                </li>
-                <li>
-                    <a href="#">娱乐</a>
-                </li>
-                <li>
-                    <a href="#">财经</a>
-                </li>
-                <li>
-                    <a href="#">科技</a>
-                </li>
-                <li>
-                    <a href="#">数码</a>
-                </li>
-                <li>
-                    <a href="#">手机</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div class="left">
-        <section>
-            <h2>娱乐新闻</h2>
-            <ul>
-                <li><a href="#">香港已没有黑帮 大家都不想在里面混</a>
-                    <time datetime="2015-10-1">2015-10-1</time>
-                </li>
-                <li><a href="#">《碟中谍5》曝外景地花絮</a>
-                    <time datetime="2015-10-1">2015-10-1</time>
-                </li>
-                <li><a href="#">灾难发生后该不该禁播娱乐节目</a>
-                    <time datetime="2015-10-1">2015-10-1</time>
-                </li>
-                <li><a href="#">多部好莱坞大片登陆中国</a>
-                    <time datetime="2015-10-1">2015-10-1</time>
-                </li>
-            </ul>
-        </section>
-    </div>
-    <div class="right">
-        <h2>军事新闻</h2>
-        <ul>
-            <li><a href="#">2015阅兵在9月3日09:00开始</a>
-                <time datetime="2015-10-1">2015-10-1</time>
-            </li>
-            <li><a href="#">习近平对县委书记十二句严厉告诫</a>
-                <time datetime="2015-10-1">2015-10-1</time>
-            </li>
-            <li><a href="#">日本在政府网站开设关于钓鱼岛网页</a>
-                <time datetime="2015-10-1">2015-10-1</time>
-            </li>
-            <li><a href="#">中国坦克打先锋巴铁反恐精锐尽出</a>
-                <time datetime="2015-10-1">2015-10-1</time>
-            </li>
-        </ul>
-    </div>
-    <div class="left">
-        <h2>数码新闻</h2>
-        <ul>
-            <li><a href="#">微软已在秘密测试Android版Edge浏览器</a>
-                <time datetime="2015-10-1">2015-10-1</time>
-            </li>
-            <li><a href="#">平板电脑五年走到市场拐点</a>
-                <time datetime="2015-10-1">2015-10-1</time>
-            </li>
-            <li><a href="#">苹果邀请函解密 Hint有新释义</a>
-                <time datetime="2015-10-1">2015-10-1</time>
-            </li>
-            <li><a href="#">IDF2015英特尔谷歌联手</a>
-                <time datetime="2015-10-1">2015-10-1</time>
-            </li>
-        </ul>
-    </div>
-    <div class="right">
-        <h2>手机新闻</h2>
-        <ul>
+<form class="contact_form" action="#" method="post" name="contact_form" onsubmit="return compare()">
+    <ul>
+        <li>
+            <h2>用户注册</h2>
+            <!--<span class="ts">* 表示必填项</span>-->
+        </li>
+        <li>
+            <label for="name">用户名：</label>
+            <input type="text" placeholder="请输入用户名" required id="name"/>
+            <span class="form_ts">4-16个字符，字母/中文/数字/下划线</span>
+        </li>
+        <li>
+            <label for="email">常用邮箱：</label>
+            <input type="email" placeholder="请输入你的常用邮箱" id="email" required/>
+            <span class="form_ts">请输入常用邮箱</span>
+        </li>
+        <li>
+            <label for="password">设置密码：</label>
+            <input type="password" pattern="[0-9a-z]{6,12}" required placeholder="设置密码" id="password"/>
+            <span class="form_ts">6-12个字符，不能含有空格</span>
+        </li>
+        <li>
+            <label for="password2">确认密码：</label>
+            <input type="password" required placeholder="确认密码" id="password2"/>
+            <span class="form_ts">请确认密码</span>
+        </li>
+        <div id="ts"></div>
+        <li>
+            <button class="submit" type="submit">立即注册</button>
+        </li>
+    </ul>
+    <script>
+        function compare() {
+            var a = document.getElementById('password').value;
+            var b = document.getElementById('password2').value;
 
-            <li><a href="#">超大运行内存手机推荐</a>
-                <time datetime="2015-10-1">2015-10-1</time>
-            </li>
-            <li><a href="#">国产旗舰手机盘点</a>
-                <time datetime="2015-10-1">2015-10-1</time>
-            </li>
-            <li><a href="#">西门子归来 首款智能机配置强跑分出色</a>
-                <time datetime="2015-10-1">2015-10-1</time>
-            </li>
-            <li><a href="#">骗子植入手机木马的10大招术</a>
-                <time datetime="2015-10-1">2015-10-1</time>
-            </li>
-        </ul>
-    </div>
-</div>
-<footer>
-    <h1>
-        <span>
-            <a href="#">关于我们</a>
-        </span>
-        <span>
-            <a href="#">联系我们</a>
-        </span>
-    </h1>
-</footer>
+            if (a == b) {
+                return true;
+            } else {
+                document.getElementById("ts").innerHTML = "密码不一致!";
+                return false;
+            }
+        }
+    </script>
+</form>
+
 </body>
 </html>
